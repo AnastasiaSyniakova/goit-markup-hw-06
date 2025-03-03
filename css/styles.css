@@ -552,7 +552,7 @@ img {
 }
 /* ========= Footer styles ========= */
 
-/* backdrop */
+/* ========= backdrop ========= */
 .backdrop {
   position: fixed;
   top: 0;
@@ -564,7 +564,7 @@ img {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
-  transition: 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: visibility, opacity, pointer-events;
 }
 
@@ -584,7 +584,7 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  transition: transform 400ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-btn {
@@ -600,7 +600,7 @@ img {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   background-color: #e7e9fc;
-  transition: stroke 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-btn:focus,
@@ -625,8 +625,6 @@ img {
   margin-bottom: 16px;
 }
 
-.modal-form {
-}
 .modal-container-block {
   margin-bottom: 8px;
 }
@@ -680,7 +678,7 @@ img {
   border-radius: 4px;
   padding-left: 38px;
   outline: transparent;
-  padding: 8px 287px 98px 16px;
+  padding: 8px 16px;
   resize: none;
 }
 
@@ -721,6 +719,10 @@ img {
   border: none;
 }
 
+.checkbox:checked + .label-checkbox .custom-checkbox svg {
+  fill: #f4f4fd;
+}
+
 .label-checkbox {
   cursor: pointer;
   font-weight: 400;
@@ -758,5 +760,4 @@ img {
 
 .btn-send:hover {
   background: #404bbf;
-  /* box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2); */
 }
