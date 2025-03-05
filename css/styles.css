@@ -825,9 +825,6 @@ img {
 .checkbox:checked + .label-checkbox .custom-checkbox {
   background-color: #404bbf;
   border: none;
-}
-
-.checkbox:checked + .label-checkbox .custom-checkbox svg {
   fill: #f4f4fd;
 }
 
