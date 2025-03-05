@@ -565,6 +565,11 @@ img {
   gap: 24px;
 }
 
+.footer-form {
+  display: flex;
+  gap: 24px;
+}
+
 .footer-form-email {
   border: 1px solid #ffffff;
   border-radius: 4px;
