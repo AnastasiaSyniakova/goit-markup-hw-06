@@ -198,6 +198,11 @@ img {
   .menu-link-active {
     color: #404bbf;
   }
+
+  .contact-link:hover,
+  .contact-link:focus {
+    color: #404bbf;
+  }
 }
 
 @media screen and (min-width: 1158px) {
@@ -714,7 +719,7 @@ img {
   letter-spacing: 0.02em;
   color: #f4f4fd;
   max-width: 264px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 
 .social-media-text {
@@ -824,6 +829,7 @@ img {
   .page-footer .container {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
     gap: 24px;
     max-width: 704px;
@@ -852,32 +858,57 @@ img {
 
 @media only screen and (min-width: 1158px) {
   .page-footer .container {
+    display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     align-items: baseline;
-    justify-content: space-between;
+    justify-content: center;
+    text-align: left;
+    gap: 0;
+  }
+
+  .footer-navigation,
+  .social-links,
+  .footer-subscribe-form {
+    width: auto;
+    flex: 1;
+  }
+
+  .footer-form {
+    flex-direction: row;
+    text-align: left;
   }
 
   .footer-navigation {
-    margin-right: 120px;
-    width: auto;
+    width: 264px; /* Fixed width */
+    height: 112px; /* Match design */
+    margin-left: 156px;
+    /* margin-right: 120px; */
+    flex: 0 0 auto;
   }
 
   .social-links {
-    width: auto;
+    flex-grow: 1;
+    text-align: left;
+  }
+
+  .social-media-text {
+    text-align: left;
+    margin-bottom: 16px;
   }
 
   .footer-subscribe-form {
     width: auto;
+    flex: 0 0 auto;
     margin-left: auto;
     text-align: left;
   }
 
   .footer-form {
-    justify-content: flex-start;
-  }
-
-  .social-media-text {
-    text-align: left;
+    display: flex;
+    flex-wrap: nowrap; /* Prevents button from dropping */
+    gap: 12px;
+    align-items: center;
   }
 
   .footer-form-email {
@@ -886,11 +917,30 @@ img {
     padding-left: 16px;
   }
 
+  .icon-footer-link {
+    display: flex;
+    justify-content: flex-start;
+    gap: 16px;
+    margin-top: 8px;
+  }
+
+  .footer-icon-link {
+    width: 40px;
+    height: 40px;
+  }
+
+  .footer-button-wrapper {
+    width: 100%;
+    text-align: right;
+  }
+
   .btn-subscribe {
-    padding: 8px 24px;
     min-width: 165px;
     height: 40px;
-    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 }
 
@@ -1218,5 +1268,5 @@ img {
   .mobile-menu {
     display: none;
   }
-
-  /* mobile menu */
+}
+/* mobile menu */
